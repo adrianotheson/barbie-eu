@@ -32,7 +32,13 @@ export default function Main() {
             titulo:'Filme Barbie',
             sinopse:'Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.',
             imagem:'/boneca.jpg'
-        }
+        },
+        {
+            id:5,
+            titulo:'Barbie',
+            sinopse:"Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.",
+            imagem:'/barbie.png'
+        },
     ]
 
     //O parâmetro "e" da minha função será o meu evento que ocorreu
@@ -55,7 +61,17 @@ export default function Main() {
                 {/* 
                     Use algo do vetor para tentar criar os filmes 
                 */}
-
+                {
+                    filmes.filter((filme)=>filme.titulo.toLowerCase().includes(texto)).map(
+                        (filme)=>
+                            <Filme 
+                                key={filme.id}
+                                sinopse={filme.sinopse}
+                                titulo={filme.titulo}
+                                imagem={filme.imagem}
+                            />
+                    )
+                }
 
                 
                 {/* <Filme titulo='Barbie'
