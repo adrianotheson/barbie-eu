@@ -1,3 +1,8 @@
+body{
+    margin:0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
 .content-main{
     display: flex;
     gap: 15px;
